@@ -10,13 +10,13 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$USER_HOME$/Documents/Java/mysql-connector-java-5.1.44" />
+          <root url="file://$USER_HOME$/Desktop/Datamatikker/mysql-connector-java-5.1.44" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="file://$USER_HOME$/Documents/Java/mysql-connector-java-5.1.44/src" />
+          <root url="file://$USER_HOME$/Desktop/Datamatikker/mysql-connector-java-5.1.44/src" />
         </SOURCES>
-        <jarDirectory url="file://$USER_HOME$/Documents/Java/mysql-connector-java-5.1.44" recursive="false" />
+        <jarDirectory url="file://$USER_HOME$/Desktop/Datamatikker/mysql-connector-java-5.1.44" recursive="false" />
       </library>
     </orderEntry>
   </component>

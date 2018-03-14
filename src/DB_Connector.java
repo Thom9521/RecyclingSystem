@@ -9,11 +9,11 @@ public class DB_Connector {
     //JDBC driver
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     //the url = jdbc://host name:port#/db name
-    private static String url = "jdbc:mysql://localhost:3306/";
+    private static String url = "jdbc:mysql://localhost:3306/recyclingsystem";
     //user name
     private static String usr = "root";
     //password
-    private static String pswrd = "8305";
+    private static String pswrd = "xmeto1234";
 
     static Connection connect() {
         System.out.println(" \n--Connecting to MySQL JDBC ");
