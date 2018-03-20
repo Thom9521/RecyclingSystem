@@ -9,7 +9,7 @@ public class Main {
 
         PantSystem test = new PantSystem();
 
-        test.getpant("A");
+        test.getpant();
 
     }
 }

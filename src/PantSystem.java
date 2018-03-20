@@ -1,4 +1,3 @@
-import java.lang.reflect.Executable;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,36 +10,37 @@ public class PantSystem {
     static Connection con = DB_Connector.connect();
     static Statement stmt = null;
 
-    public void getpant(String type) throws SQLException{
+    public void getpant() throws SQLException {
 
+        Scanner input = new Scanner(System.in);
 
+        System.out.println("Indtast panttypen (A/B/C):");
+        String type = input.nextLine();
 
-            Scanner input = new Scanner(System.in);
-
+        String sql;
+        double pris = 0;
+        while(!type.equals("0")) {
             System.out.println("Indtast panttypen (A/B/C):");
-            //String type = input.nextLine();
-
-            if (type == "A") {
-                System.out.println("Du har valgt pant A");
-            } else {
-                System.out.println("Fuck off");
-            }
-
-            String sql;
-            String hentetype = "";
-            sql = "SELECT pris FROM typer WHERE panttype = '" + type + "'";
-
             stmt = con.createStatement();
+            sql = "SELECT pris FROM typer WHERE pant = '" + type + "'";
             ResultSet rs = stmt.executeQuery(sql);
 
             if (rs.next()) {
-                hentetype = rs.getString("panttype");
+                pris = rs.getDouble("pris");
             }
-                if (hentetype == type){
-                    System.out.println("Du har valgt pant " + type + " med prisen: " + sql);
-                }
+
+
+
+            if (pris == 1) {
+                System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
+            } else if (pris == 1.5) {
+                System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
+            } else if (pris == 3) {
+                System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
+            }type = input.nextLine();
         }
-        }
+    }
+}
 
 
 
