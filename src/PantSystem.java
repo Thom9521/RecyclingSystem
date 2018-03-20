@@ -1,7 +1,5 @@
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PantSystem {
@@ -14,13 +12,21 @@ public class PantSystem {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Indtast panttypen (A/B/C):");
+        System.out.println("Indtast panttypen (A/B/C) eller afslut med 0:");
         String type = input.nextLine();
+
+        ArrayList<String> teste = new ArrayList<String>();
+        double[] samletPris = new double[100];
+        double test = 0;
 
         String sql;
         double pris = 0;
         while(!type.equals("0")) {
-            System.out.println("Indtast panttypen (A/B/C):");
+
+            double sp  = 0;
+
+            System.out.println("Indtast panttypen (A/B/C) eller afslut med 0:");
+
             stmt = con.createStatement();
             sql = "SELECT pris FROM typer WHERE pant = '" + type + "'";
             ResultSet rs = stmt.executeQuery(sql);
@@ -29,17 +35,20 @@ public class PantSystem {
                 pris = rs.getDouble("pris");
             }
 
-
-
             if (pris == 1) {
                 System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
             } else if (pris == 1.5) {
                 System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
             } else if (pris == 3) {
                 System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
-            }type = input.nextLine();
+
+            }
+
+                type = input.nextLine();
         }
+        System.out.println("Din samlede pris er: " + teste.size());
     }
+
 }
 
 
