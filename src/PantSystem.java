@@ -50,7 +50,7 @@ public class PantSystem {
 
         }
         System.out.println("Din samlede pris er: " + samletPris + " kr. med et antal af "+ bottles.size() +" flasker." +
-                "\nDu har indsat de følgende panttyper:"  + bottles);
+                "\nDu har indsat følgende panttyper:"  + bottles);
     }
     
 
