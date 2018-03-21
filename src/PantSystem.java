@@ -16,11 +16,11 @@ public class PantSystem {
         String type = input.nextLine();
 
         ArrayList<String> teste = new ArrayList<String>();
-        double[] samletPris = new double[100];
-        double test = 0;
+        double samletPris = 0;
 
         String sql;
         double pris = 0;
+
         while(!type.equals("0")) {
 
             double sp  = 0;
@@ -37,17 +37,21 @@ public class PantSystem {
 
             if (pris == 1) {
                 System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
+                samletPris = samletPris + 1;
             } else if (pris == 1.5) {
                 System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
+                samletPris = samletPris + 1.5;
             } else if (pris == 3) {
                 System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
+                samletPris = samletPris + 3;
 
             }
 
                 type = input.nextLine();
         }
-        System.out.println("Din samlede pris er: " + teste.size());
+        System.out.println("Din samlede pris er: " + samletPris + " kr.");
     }
+    
 
 }
 
