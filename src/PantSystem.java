@@ -43,8 +43,11 @@ public class PantSystem {
                 System.out.println("Du har valgt pant '" + type + "' med prisen: " + pris + " kr.");
                 samletPris = samletPris + 3;
                 bottles.add("C");
-
             }
+            else {
+                System.out.println("Denne panttype findes ikke. Prøv igen.");
+            }
+
             System.out.println("Indtast panttypen (A/B/C) eller afslut med 0:");
                 type = input.nextLine();
 
