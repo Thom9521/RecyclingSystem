@@ -23,8 +23,6 @@ public class PantSystem {
 
         while(!type.equals("0")) {
 
-            double sp  = 0;
-
             stmt = con.createStatement();
             sql = "SELECT pris FROM typer WHERE pant = '" + type + "'";
             ResultSet rs = stmt.executeQuery(sql);
