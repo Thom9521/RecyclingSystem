@@ -15,7 +15,7 @@ public class PantSystem {
         System.out.println("Indtast panttypen (A/B/C) eller afslut med 0:");
         String type = input.nextLine();
 
-        ArrayList<String> teste = new ArrayList<String>();
+        ArrayList<String> bottles = new ArrayList<String>();
         double samletPris = 0;
 
         String sql;
@@ -38,18 +38,22 @@ public class PantSystem {
             if (pris == 1) {
                 System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
                 samletPris = samletPris + 1;
+                bottles.add("A");
             } else if (pris == 1.5) {
                 System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
                 samletPris = samletPris + 1.5;
+                bottles.add("B");
             } else if (pris == 3) {
                 System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
                 samletPris = samletPris + 3;
+                bottles.add("C");
 
             }
 
                 type = input.nextLine();
         }
-        System.out.println("Din samlede pris er: " + samletPris + " kr.");
+        System.out.println("Din samlede pris er: " + samletPris + " kr. med et antal af "+ bottles.size() +" flasker." +
+                "\nDu har indsat de følgende flasker:" + bottles);
     }
     
 
