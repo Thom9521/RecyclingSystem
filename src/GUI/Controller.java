@@ -48,7 +48,7 @@ public class Controller {
         }
 
         if (e.getSource() == btnAfslut){
-            lblTotal.setText("Antal flasker du har smidt \ni pantmaskien: " + String.valueOf(aText + bText + cText)+
+            lblTotal.setText("Antal flasker du har smidt \ni pantmaskinen: " + String.valueOf(aText + bText + cText)+
             " med en \nsamlet pris på: " + String.valueOf(aPris + bPris + cPris) + " kr.");
         }
 

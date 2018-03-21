@@ -20,7 +20,7 @@
       <Label fx:id="lblB" layoutX="277.0" layoutY="217.0" text="0" />
       <Label fx:id="lblC" layoutX="430.0" layoutY="217.0" text="0" />
       <Button fx:id="btnAfslut" layoutX="94.0" layoutY="335.0" mnemonicParsing="false" onAction="#eButtonAction" text="Afslut" />
-      <Label fx:id="lblTotal" alignment="TOP_LEFT" layoutX="277.0" layoutY="312.0" prefHeight="86.0" prefWidth="219.0" text="Kvitering her">
+      <Label fx:id="lblTotal" alignment="TOP_LEFT" layoutX="277.0" layoutY="312.0" prefHeight="86.0" prefWidth="219.0">
          <font>
             <Font size="15.0" />
          </font>
