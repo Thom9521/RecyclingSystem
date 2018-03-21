@@ -43,7 +43,7 @@ public class DB_Connector {
         }
         //if connection successful
         if (con != null) {
-            System.out.println("\n--Connection successful--");
+            System.out.println("\n--Connection successful--\n");
         } else {
             //if connection fails
             System.out.println("\n-- failed to connect--");

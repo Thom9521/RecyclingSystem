@@ -25,8 +25,6 @@ public class PantSystem {
 
             double sp  = 0;
 
-            System.out.println("Indtast panttypen (A/B/C) eller afslut med 0:");
-
             stmt = con.createStatement();
             sql = "SELECT pris FROM typer WHERE pant = '" + type + "'";
             ResultSet rs = stmt.executeQuery(sql);
@@ -36,21 +34,22 @@ public class PantSystem {
             }
 
             if (pris == 1) {
-                System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
+                System.out.println("Du har valgt pant '" + type + "' med prisen: " + pris + " kr.");
                 samletPris = samletPris + 1;
                 bottles.add("A");
             } else if (pris == 1.5) {
-                System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
+                System.out.println("Du har valgt pant '" + type + "' med prisen: " + pris + " kr.");
                 samletPris = samletPris + 1.5;
                 bottles.add("B");
             } else if (pris == 3) {
-                System.out.println("Du har valgt pant " + type + " med prisen: " + pris);
+                System.out.println("Du har valgt pant '" + type + "' med prisen: " + pris + " kr.");
                 samletPris = samletPris + 3;
                 bottles.add("C");
 
             }
-
+            System.out.println("Indtast panttypen (A/B/C) eller afslut med 0:");
                 type = input.nextLine();
+
         }
         System.out.println("Din samlede pris er: " + samletPris + " kr. med et antal af "+ bottles.size() +" flasker." +
                 "\nDu har indsat de følgende panttyper:"  + bottles);
